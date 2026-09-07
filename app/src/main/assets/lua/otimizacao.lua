@@ -1,28 +1,28 @@
--- Roblox Boost: perfil Lua local.
--- Este arquivo descreve o perfil de otimização usado pelo app.
--- Não altera arquivos internos do Roblox nem tenta modificar o jogo.
+-- Roblox Boost Optimization Profile
+-- Lua declarative optimization profile
 
-local profiles = {
-    basico = {
-        force_stop = true,
-        compile = "speed-profile",
-        trim_cache_mb = 0
-    },
+local profile = {}
 
-    medio = {
-        force_stop = true,
-        compile = "speed",
-        trim_cache_mb = 0
-    },
+-- Optimization levels: basic, medium, extreme
+profile.level = "basic"
 
-    extremo = {
-        force_stop = true,
-        compile = "speed",
-        dexopt_job = true,
-        trim_cache_mb = 256
-    }
+-- Basic optimization
+profile.basic = {
+    forceStop = true,
+    compilation = "speed-profile"
 }
 
-function get_profile(name)
-    return profiles[name] or profiles.basico
-end
+-- Medium optimization
+profile.medium = {
+    compilation = "speed-profile",
+    speed = true
+}
+
+-- Extreme optimization
+profile.extreme = {
+    compilation = "speed",
+    bgDexoptJob = true,
+    trimCaches = "limited"
+}
+
+return profile

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Roblox Boost</string>
+    <string name="optimization_title">Otimizador de Roblox</string>
+    <string name="basic">Básico</string>
+    <string name="medium">Médio</string>
+    <string name="extreme">Extremo</string>
+</resources>

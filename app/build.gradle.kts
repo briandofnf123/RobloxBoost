@@ -47,4 +47,3 @@ dependencies {
     // Embedded Lua runtime used for the optimization profile engine.
     implementation("org.luaj:luaj-jse:3.0.1")
 }
-
